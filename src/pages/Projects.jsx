@@ -60,6 +60,7 @@ const Projects = () => {
           <div className="max-w-sm rounded-xl overflow-hidden shadow-xl border-white border-2 ">
             <img
               className="object-fill mx-auto "
+              loading="lazy"
               src="/todo.png"
               alt="Todo App"
             />
@@ -103,6 +104,7 @@ const Projects = () => {
         <ProjectAnimation>
           <div className="max-w-sm rounded-xl overflow-hidden shadow-xl border-white border-2 ">
             <img
+              loading="lazy"
               className="object-fill mx-auto "
               src="/weather.png"
               alt="weather Api"
@@ -148,6 +150,7 @@ const Projects = () => {
           <div className="max-w-sm rounded-xl overflow-hidden shadow-xl border-white border-2 ">
             <img
               className="object-fill mx-auto "
+              loading="lazy"
               src="/thread.png"
               alt="Thread clone"
             />
