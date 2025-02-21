@@ -15,8 +15,9 @@ const Projects = () => {
         <ProjectAnimation>
           <div className="max-w-sm rounded-xl overflow-hidden shadow-xl border-white border-2 max-h-fit ">
             <img
+              loading="lazy"
               className="object-fill mx-auto "
-              src="sortingVisualizer.png"
+              src="/sortingVisualizer.png"
               alt="Sorting Visualizer"
             />
             <div className="px-6 py-4">
@@ -59,6 +60,7 @@ const Projects = () => {
         <ProjectAnimation>
           <div className="max-w-sm rounded-xl overflow-hidden shadow-xl border-white border-2 ">
             <img
+              loading="lazy"
               className="object-fill mx-auto "
               src="/todo.png"
               alt="Todo App"
@@ -105,7 +107,7 @@ const Projects = () => {
             <img
               loading="lazy"
               className="object-fill mx-auto "
-              src="weather.png"
+              src="/weather.png"
               alt="weather Api"
             />
             <div className="px-6 py-4">
@@ -117,7 +119,7 @@ const Projects = () => {
                 with a clean and visually appealing UI.
               </p>
             </div>
-            <div className="px-6  ">
+            <div className="px-6">
               <motion.a
                 transition={{ type: "spring", stiffness: 300, damping: 20 }}
                 target="_blank"
@@ -148,6 +150,7 @@ const Projects = () => {
         <ProjectAnimation>
           <div className="max-w-sm rounded-xl overflow-hidden shadow-xl border-white border-2 ">
             <img
+              loading="lazy"
               className="object-fill mx-auto "
               src="/thread.png"
               alt="Thread clone"
