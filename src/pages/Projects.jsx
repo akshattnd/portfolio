@@ -16,7 +16,7 @@ const Projects = () => {
           <div className="max-w-sm rounded-xl overflow-hidden shadow-xl border-white border-2 max-h-fit ">
             <img
               className="object-fill mx-auto "
-              src="/sortingVisualizer.png"
+              src="sortingVisualizer.png"
               alt="Sorting Visualizer"
             />
             <div className="px-6 py-4">
@@ -60,7 +60,7 @@ const Projects = () => {
           <div className="max-w-sm rounded-xl overflow-hidden shadow-xl border-white border-2 ">
             <img
               className="object-fill mx-auto "
-              src="/todo.png"
+              src="todo.png"
               alt="Todo App"
             />
             <div className="px-6 py-4">
@@ -104,7 +104,7 @@ const Projects = () => {
           <div className="max-w-sm rounded-xl overflow-hidden shadow-xl border-white border-2 ">
             <img
               className="object-fill mx-auto "
-              src="/weather.png"
+              src="weather.png"
               alt="weather Api"
             />
             <div className="px-6 py-4">
@@ -148,7 +148,7 @@ const Projects = () => {
           <div className="max-w-sm rounded-xl overflow-hidden shadow-xl border-white border-2 ">
             <img
               className="object-fill mx-auto "
-              src="/thread.png"
+              src="thread.png"
               alt="Thread clone"
             />
             <div className="px-6 py-4">
