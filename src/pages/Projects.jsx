@@ -17,7 +17,8 @@ const Projects = () => {
             <img
               loading="lazy"
               className="object-fill mx-auto "
-              src="./sortingVisualizer.png"
+              src={`${import.meta.env.BASE_URL}sortingVisualizer.png`}
+              
               alt="Sorting Visualizer"
             />
             <div className="px-6 py-4">
@@ -62,7 +63,7 @@ const Projects = () => {
             <img
               loading="lazy"
               className="object-fill mx-auto "
-              src="./todo.png"
+              src={`${import.meta.env.BASE_URL}todo.png`}
               alt="Todo App"
             />
             <div className="px-6 py-4">
@@ -107,7 +108,7 @@ const Projects = () => {
             <img
               loading="lazy"
               className="object-fill mx-auto "
-              src="./weather.png"
+              src={`${import.meta.env.BASE_URL}weather.png`}
               alt="weather Api"
             />
             <div className="px-6 py-4">
@@ -152,7 +153,7 @@ const Projects = () => {
             <img
               loading="lazy"
               className="object-fill mx-auto "
-              src="./thread.png"
+              src={`${import.meta.env.BASE_URL}thread.png`}
               alt="Thread clone"
             />
             <div className="px-6 py-4">
