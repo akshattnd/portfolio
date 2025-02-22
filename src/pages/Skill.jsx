@@ -1,13 +1,13 @@
 import Animate from "../components/Animate";
 import React from "react";
 const Skill = () => {
-  const svg = "text-5xl mb-1 mx-auto text-white";
+  const svg = "text-5xl mb-1 mx-auto text-white dark:text-gray-200";
   const skills =
-    "rounded-2xl shadow-lg hover:shadow-xl border-3 border-[#6D28D9] text-[#6D28D9] p-4 flex flex-col items-center justify-center w-24 h-24 sm:w-28 sm:h-28";
+    "rounded-2xl shadow-lg hover:shadow-xl border-3 border-[#6D28D9] text-[#6D28D9] dark:text-[#C4B5FD] dark:border-[#C4B5FD] p-4 flex flex-col items-center justify-center w-24 h-24 sm:w-28 sm:h-28 bg-white dark:bg-[#1E1E1E] transition-colors duration-300";
   return (
-    <div className="flex flex-col items-center justify-center  min-h-screen md:p-4 p-2">
+    <div className="flex flex-col items-center justify-center min-h-screen md:p-4 p-2.5 bg-gray-100  dark:bg-gray-900 dark:text-white transition-colors duration-300">
       <Animate>
-        <h2 className="text-3xl md:text-6xl font-bold mb-6 text-white tracking-wide  md:p-4">
+        <h2 className="text-3xl md:text-6xl font-bold mb-8 text-black dark:text-white tracking-wide md:p-4">
           Skills
         </h2>
       </Animate>

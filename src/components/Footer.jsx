@@ -7,8 +7,8 @@ const Footer = () => {
   };
   const transition = { type: "spring", stiffness: 300, damping: 20 };
   return (
-    <div className="p-2 border-t-2 border-t-purple-500 bg-[#1a202c] text-white">
-      <div className="flex flex-col lg:flex-row lg:gap-6 gap-3 justify-center  p-2">
+    <div className="p-2 border-t-2 border-t-purple-500   bg-white dark:bg-[#1a202c] text-black dark:text-white">
+      <div className="flex flex-col lg:flex-row lg:gap-6 gap-4 justify-center  p-2">
         <p className="text-sm md:text-xl flex items-center gap-3">
           <motion.svg
             transition={transition}
@@ -62,7 +62,7 @@ const Footer = () => {
         </p>
       </div>
       <div class="flex flex-col md:flex-row items-center justify-center">
-        <p class="text-sm">
+        <p class="text-lg p-2 pb-4">
           © Portfolio Developed by{" "}
           <a
             target="_blank"

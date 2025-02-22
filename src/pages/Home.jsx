@@ -1,16 +1,17 @@
 import { motion } from "framer-motion";
 import React from "react";
 import Animate from "../components/Animate";
+
 export default function Home() {
   return (
-    <div className="flex flex-col items-center  justify-center min-h-screen text-center md:px-4 px-2 ">
+    <div className="flex flex-col items-center justify-center min-h-screen text-center md:px-4 px-2 bg-white text-black dark:bg-gray-900 dark:text-white">
       <Animate>
-        <h2 className="text-2xl md:text-5xl font-bold mb-4 text-white">
+        <h2 className="text-2xl md:text-5xl font-bold mb-4">
           Hi, I'm Akshat Tandon
         </h2>
       </Animate>
       <Animate>
-        <p className="text-lg md:text-xl mb-6 text-gray-200 inline-block mx-auto w-[80%] md:w-[50%]">
+        <p className="text-lg md:text-xl mb-6 inline-block mx-auto w-[80%] md:w-[50%] text-gray-700 dark:text-gray-300">
           Passionate <span className="text-[#6D28D9]">Web Developer</span> with
           a strong desire to create meaningful and innovative web applications.
           While I may be relatively new to the field, my enthusiasm for coding
@@ -73,7 +74,7 @@ export default function Home() {
             scale: 1.1,
           }}
           type="button"
-          className=" m-2 p-4 font-semibold flex gap-1.5 items-center border-3 border-[#6D28D9] rounded-3xl mt-1.5 md:mt-3 bg-white text-purple-700 hover:bg-purple-700 hover:text-white transition-colors duration-300"
+          className="m-2 p-4 font-semibold flex gap-1.5 items-center border-3 border-[#6D28D9] rounded-3xl mt-1.5 md:mt-3 bg-white text-purple-700 hover:bg-purple-700 hover:text-white dark:bg-gray-800 dark:text-purple-300 dark:hover:bg-purple-700 dark:hover:text-white transition-colors duration-300"
         >
           <svg
             stroke="currentColor"
@@ -83,7 +84,6 @@ export default function Home() {
             height="20"
             width="20"
             xmlns="http://www.w3.org/2000/svg"
-            data-darkreader-inline-stroke=""
             className="relative top-1"
           >
             <path fill="none" d="M0 0h24v24H0z"></path>
