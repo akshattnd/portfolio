@@ -28,5 +28,5 @@ This is a fully responsive, modern web app built using **React** and deployed wi
 
 1. **Clone the repo**
    ```bash
-   git clone https://github.com/yourusername/portfolio.git
+   git clone https://github.com/akshattnd/portfolio.git
    cd portfolio
