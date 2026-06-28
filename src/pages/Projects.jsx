@@ -6,42 +6,42 @@ import ProjectAnimation from "../components/ProjectAnimation";
 
 const createdProjects = [
   {
-    img: "agentic-ai.png",
+    img: null,
     title: "Agentic AI Chat Backend",
     desc: "AI chatbot backend built with FastAPI, LangChain, and LangGraph. Supports streaming responses, tool calling, short-term and long-term memory, and Grok API integration.",
     code: "https://github.com/akshattnd/agentic_ai",
     live: null,
   },
   {
-    img: "resume-shortlisting.png",
+    img: null,
     title: "AI Resume Shortlisting Bot",
     desc: "AI-powered resume screening system that matches resumes against job descriptions using LLMs to automate candidate shortlisting and ranking.",
     code: "https://github.com/akshattnd/ai-resume-shortlisting-bot-from-job-description",
     live: null,
   },
   {
-    img: "stockflow.png",
+    img: null,
     title: "StockFlow API",
     desc: "Inventory and stock management backend built with FastAPI. Provides scalable REST APIs for managing products, stock movements, and warehouse operations.",
     code: "https://github.com/akshattnd/stockflow",
     live: null,
   },
   {
-    img: "url-shortener.png",
+    img: null,
     title: "URL Shortener",
     desc: "FastAPI-based URL shortener with short link generation, redirection, and persistent storage. Designed with a clean REST API architecture.",
     code: "https://github.com/akshattnd/url_shortner/tree/dev",
     live: null,
   },
   {
-    img: "ratelimiter.png",
+    img: null,
     title: "Rate Limiter",
     desc: "MERN application implementing a Token Bucket rate limiter as reusable Express middleware to protect APIs from excessive requests.",
     code: "https://github.com/akshattnd/ratelimiter",
     live: null,
   },
   {
-    img: "thread.png",
+    img: null,
     title: "Thread Clone",
     desc: "A social media clone built using the MERN stack with TypeScript and Redux for better state management. Users can post, comment, and interact with content.",
     code: "https://github.com/akshattnd/threadClone",
@@ -83,24 +83,32 @@ const Projects = () => {
       </Animate>
 
       <div className="flex flex-wrap justify-center gap-8 max-w-7xl mx-auto">
-        {createdProjects.map((project, index) => (
+        {createdProjects.map((project) => (
           <ProjectAnimation key={project.title}>
             <div className="flex flex-col w-[340px] rounded-xl overflow-hidden shadow-xl bg-white dark:bg-[#1E1E1E] h-full">
-              <img
-                loading="lazy"
-                src={`${import.meta.env.BASE_URL}${project.img}`}
-                alt={project.title}
-                className="w-full h-52 object-cover"
-              />
+              {project.img && (
+                <img
+                  loading="lazy"
+                  src={`${import.meta.env.BASE_URL}${project.img}`}
+                  alt={project.title}
+                  className="w-full h-52 object-cover"
+                />
+              )}
 
-              <div className="flex flex-col flex-1 p-6">
-                <h3 className="text-xl font-bold mb-3 dark:text-gray-200">
-                  {project.title}
-                </h3>
+              <div
+                className={`flex flex-col flex-1 p-6 ${
+                  !project.img ? "justify-between" : ""
+                }`}
+              >
+                <div>
+                  <h3 className="text-xl font-bold mb-3 dark:text-gray-200">
+                    {project.title}
+                  </h3>
 
-                <p className="text-gray-700 dark:text-gray-400 flex-1">
-                  {project.desc}
-                </p>
+                  <p className="text-gray-700 dark:text-gray-400">
+                    {project.desc}
+                  </p>
+                </div>
 
                 <div className="flex justify-center gap-4 mt-6">
                   <motion.a
