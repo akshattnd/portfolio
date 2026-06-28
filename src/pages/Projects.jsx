@@ -2,7 +2,71 @@ import React from "react";
 import ProjectAnimation from "../components/ProjectAnimation";
 import { motion } from "framer-motion";
 import Animate from "../components/Animate";
-
+const createdProjects = [
+  {
+    img: "agentic-ai.png", // add screenshot
+    title: "Agentic AI Chat Backend",
+    desc: "AI chatbot backend built with FastAPI, LangChain, and LangGraph. Supports streaming responses, tool calling, short-term and long-term memory, and Grok API integration.",
+    code: "https://github.com/akshattnd/agentic_ai",
+    live: null,
+  },
+  {
+    img: "resume-shortlisting.png",
+    title: "AI Resume Shortlisting Bot",
+    desc: "AI-powered resume screening system that matches resumes against job descriptions using LLMs to automate candidate shortlisting and ranking.",
+    code: "https://github.com/akshattnd/ai-resume-shortlisting-bot-from-job-description",
+    live: null,
+  },
+  {
+    img: "stockflow.png",
+    title: "StockFlow API",
+    desc: "Inventory and stock management backend built with FastAPI. Provides scalable REST APIs for managing products, stock movements, and warehouse operations.",
+    code: "https://github.com/akshattnd/stockflow",
+    live: null,
+  },
+  {
+    img: "url-shortener.png",
+    title: "URL Shortener",
+    desc: "FastAPI-based URL shortener with short link generation, redirection, and persistent storage. Designed with a clean REST API architecture.",
+    code: "https://github.com/akshattnd/url_shortner/tree/dev",
+    live: null,
+  },
+  {
+    img: "ratelimiter.png",
+    title: "Rate Limiter",
+    desc: "MERN application implementing a Token Bucket rate limiter as reusable Express middleware to protect APIs from excessive requests.",
+    code: "https://github.com/akshattnd/ratelimiter",
+    live: null,
+  },
+  {
+    img: "thread.png",
+    title: "Thread Clone",
+    desc: "A social media clone built using the MERN stack with TypeScript and Redux for better state management. Users can post, comment, and interact with content.",
+    code: "https://github.com/akshattnd/threadClone",
+    live: null,
+  },
+  {
+    img: "sortingVisualizer.png",
+    title: "Sorting Visualizer",
+    desc: "Web app built with JavaScript and React featuring animations to visualize Bubble Sort, Merge Sort, Quick Sort, and other sorting algorithms.",
+    code: "https://github.com/akshattnd/Sorting-algorithm-visualizer",
+    live: "https://akshattnd.github.io/Sorting-algorithm-visualizer/",
+  },
+  {
+    img: "weather.png",
+    title: "Weather App",
+    desc: "Real-time weather application built with React and Weather APIs, displaying forecasts, humidity, and temperature with a responsive UI.",
+    code: "https://github.com/akshattnd/weatherApp",
+    live: "https://akshattnd.github.io/weatherApp/",
+  },
+  {
+    img: "todo.png",
+    title: "Todo App",
+    desc: "Task management application built with React, Context API, and Local Storage featuring task creation, editing, and persistence.",
+    code: "https://github.com/akshattnd/todoApp",
+    live: "https://akshattnd.github.io/todoApp/",
+  },
+];
 const Projects = () => {
   return (
     <div className="flex flex-col items-center justify-center min-h-screen md:p-4 p-2 dark:bg-gray-900 dark:text-white">
@@ -12,36 +76,7 @@ const Projects = () => {
         </h2>
       </Animate>
       <div className="flex flex-wrap gap-6 md:gap-14 w-[90%] md:w-[70%] mx-auto justify-center align-center p-4 ">
-        {[
-          {
-            img: "sortingVisualizer.png",
-            title: "Sorting Visualizer",
-            desc: "Web app built with JavaScript and React, featuring animations to visually demonstrate sorting algorithms like Bubble Sort, Quick Sort, and Merge Sort.",
-            code: "https://github.com/akshattnd/Sorting-algorithm-visualizer",
-            live: "https://akshattnd.github.io/Sorting-algorithm-visualizer/",
-          },
-          {
-            img: "todo.png",
-            title: "Todo App",
-            desc: "Task management app using React, Context API, and Local Storage. Users can add, edit, and delete tasks with a clean UI.",
-            code: "https://github.com/akshattnd/todoApp",
-            live: "https://akshattnd.github.io/todoApp/",
-          },
-          {
-            img: "weather.png",
-            title: "Weather App",
-            desc: "Real-time weather app using an API. Features include React paginators for smooth navigation, displaying temperature, humidity, and forecasts.",
-            code: "https://github.com/akshattnd/weatherApp",
-            live: "https://akshattnd.github.io/weatherApp/",
-          },
-          {
-            img: "thread.png",
-            title: "Thread Clone",
-            desc: "A social media clone built using the MERN stack with TypeScript and Redux for better state management. Users can post, comment, and interact with content.",
-            code: "https://github.com/akshattnd/threadClone",
-            live: null,
-          },
-        ].map((project, index) => (
+        {createdProjectes.map((project, index) => (
           <ProjectAnimation key={index}>
             <div className="max-w-sm rounded-xl  overflow-hidden shadow-xl  dark:bg-[#1E1E1E]">
               <img
