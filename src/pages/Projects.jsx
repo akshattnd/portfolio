@@ -59,14 +59,14 @@ const createdProjects = [
     title: "Weather App",
     desc: "Real-time weather application built with React and Weather APIs, displaying forecasts, humidity, and temperature with a responsive UI.",
     code: "https://github.com/akshattnd/weatherApp",
-    live: "https://akshattnd.github.io/weatherApp/",
+    live: null,
   },
   {
     img: "todo.png",
     title: "Todo App",
     desc: "Task management application built with React, Context API, and Local Storage featuring task creation, editing, and persistence.",
     code: "https://github.com/akshattnd/todoApp",
-    live: "https://akshattnd.github.io/todoApp/",
+    live: null,
   },
 ];
 
