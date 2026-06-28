@@ -69,7 +69,7 @@ export default function Home() {
         <motion.a
           transition={{ type: "spring", stiffness: 300, damping: 20 }}
           target="_blank"
-          href="https://drive.google.com/file/d/1_4ecqRjcX51QxHhzeVMAI3ySOVlLoXD_/view?usp=drive_link"
+          href="https://docs.google.com/document/d/1N2JhynFf7Xjujh7b8_fVvvjOAjVP6oCrTnH5Xaz0jZc/edit?usp=sharing"
           whileHover={{
             scale: 1.1,
           }}
