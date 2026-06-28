@@ -1,10 +1,12 @@
 import React from "react";
-import ProjectAnimation from "../components/ProjectAnimation";
 import { motion } from "framer-motion";
+
 import Animate from "../components/Animate";
+import ProjectAnimation from "../components/ProjectAnimation";
+
 const createdProjects = [
   {
-    img: "agentic-ai.png", // add screenshot
+    img: "agentic-ai.png",
     title: "Agentic AI Chat Backend",
     desc: "AI chatbot backend built with FastAPI, LangChain, and LangGraph. Supports streaming responses, tool calling, short-term and long-term memory, and Grok API integration.",
     code: "https://github.com/akshattnd/agentic_ai",
@@ -67,59 +69,78 @@ const createdProjects = [
     live: "https://akshattnd.github.io/todoApp/",
   },
 ];
+
+const buttonClass =
+  "inline-block px-4 py-2 text-lg font-semibold border-2 border-[#6D28D9] rounded-full bg-white text-purple-700 hover:bg-purple-700 hover:text-white dark:bg-[#6D28D9] dark:text-white dark:hover:bg-white dark:hover:text-[#6D28D9] transition-colors duration-300";
+
 const Projects = () => {
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen md:p-4 p-2 dark:bg-gray-900 dark:text-white">
+    <section className="min-h-screen dark:bg-gray-900 dark:text-white py-12 px-4">
       <Animate>
-        <h2 className="text-3xl md:text-6xl font-bold mb-8 text-white tracking-wide md:p-4 p-2">
+        <h2 className="text-center text-4xl md:text-6xl font-bold mb-12">
           Projects
         </h2>
       </Animate>
-      <div className="flex flex-wrap gap-6 md:gap-14 w-[90%] md:w-[70%] mx-auto justify-center align-center p-4 ">
-        {createdProjectes.map((project, index) => (
-          <ProjectAnimation key={index}>
-            <div className="max-w-sm rounded-xl  overflow-hidden shadow-xl  dark:bg-[#1E1E1E]">
+
+      <div className="flex flex-wrap justify-center gap-8 max-w-7xl mx-auto">
+        {createdProjects.map((project, index) => (
+          <ProjectAnimation key={project.title}>
+            <div className="flex flex-col w-[340px] rounded-xl overflow-hidden shadow-xl bg-white dark:bg-[#1E1E1E] h-full">
               <img
                 loading="lazy"
-                className="object-fill mx-auto"
                 src={`${import.meta.env.BASE_URL}${project.img}`}
                 alt={project.title}
+                className="w-full h-52 object-cover"
               />
-              <div className="px-6 py-4">
-                <div className="font-bold text-xl mb-2 dark:text-gray-200">
+
+              <div className="flex flex-col flex-1 p-6">
+                <h3 className="text-xl font-bold mb-3 dark:text-gray-200">
                   {project.title}
-                </div>
-                <p className="text-white dark:text-gray-400 text-base">
+                </h3>
+
+                <p className="text-gray-700 dark:text-gray-400 flex-1">
                   {project.desc}
                 </p>
-              </div>
-              <div className="flex justify-center pb-4 gap-4">
-                <motion.a
-                  transition={{ type: "spring", stiffness: 300, damping: 20 }}
-                  target="_blank"
-                  whileHover={{ scale: 1.1 }}
-                  className="inline-block px-3 py-1 mx-2 text-lg font-semibold border-2 border-[#6D28D9] rounded-3xl mt-1.5 md:mt-3 bg-white text-purple-700 hover:bg-purple-700 hover:text-white dark:bg-[#6D28D9] dark:text-white dark:hover:bg-white dark:hover:text-[#6D28D9] transition-colors duration-300"
-                  href={project.code}
-                >
-                  Code
-                </motion.a>
-                {project.live && (
+
+                <div className="flex justify-center gap-4 mt-6">
                   <motion.a
-                    transition={{ type: "spring", stiffness: 300, damping: 20 }}
+                    href={project.code}
                     target="_blank"
-                    whileHover={{ scale: 1.1 }}
-                    className="mx-2 inline-block px-3 py-1 text-lg font-semibold border-2 border-[#6D28D9] rounded-3xl mt-1.5 md:mt-3 bg-white text-purple-700 hover:bg-purple-700 hover:text-white dark:bg-[#6D28D9] dark:text-white dark:hover:bg-white dark:hover:text-[#6D28D9] transition-colors duration-300"
-                    href={project.live}
+                    rel="noopener noreferrer"
+                    whileHover={{ scale: 1.08 }}
+                    transition={{
+                      type: "spring",
+                      stiffness: 300,
+                      damping: 20,
+                    }}
+                    className={buttonClass}
                   >
-                    Live
+                    Code
                   </motion.a>
-                )}
+
+                  {project.live && (
+                    <motion.a
+                      href={project.live}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      whileHover={{ scale: 1.08 }}
+                      transition={{
+                        type: "spring",
+                        stiffness: 300,
+                        damping: 20,
+                      }}
+                      className={buttonClass}
+                    >
+                      Live
+                    </motion.a>
+                  )}
+                </div>
               </div>
             </div>
           </ProjectAnimation>
         ))}
       </div>
-    </div>
+    </section>
   );
 };
 
